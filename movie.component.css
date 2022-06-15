@@ -1,0 +1,24 @@
+h1{
+  
+  text-align:center;
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+.first{
+    background-color:blue;
+}
+
+.last{
+    background-color:red;
+}
+.odd{
+    background-color:lightskyblue;
+}
+.even{
+    background-color:lightpink;
+}
+.select{
+    background-color: yellow;
+}

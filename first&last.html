@@ -1,0 +1,22 @@
+<h1>ENJOY THE MOVIE APP!</h1>
+
+    <ul>
+    <tr>
+        <th>select</th>
+        <th>Number</th>
+        <th>moviename</th>
+        <th>director</th>
+        <th>actor</th>
+        <th>year</th>
+    </tr>
+
+    
+    <tr *ngFor ="let movie of movielist; let i = index; let f= first; let l = last;"[ngClass]="{first:f,last:l}"> 
+     <button (click)="movie">Select</button>  
+    <td>{{i}}</td>
+    <td>{{movie.moviename}}</td>
+    <td>{{movie.director}}</td>
+    <td>{{movie.actor}}</td>
+    <td>{{movie.year}}</td>
+</tr>
+</ul>

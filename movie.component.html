@@ -1,0 +1,43 @@
+<h1>ENJOY THE MOVIE APP!</h1>
+
+    <ul>
+    <tr>
+        <th>select</th>
+        <th>Number</th>
+        <th>moviename</th>
+        <th>director</th>
+        <th>actor</th>
+        <th>year</th>
+    </tr>
+
+     <tr *ngFor ="let movie of movielist; let i = index; let o = odd; let e = even;"[ngClass]="{odd:o,even:e}"> 
+     <button mat-raised (click)="movie">Select</button>  
+    <td>{{i}}</td>
+    <td>{{movie.moviename}}</td>
+    <td>{{movie.director}}</td>
+    <td>{{movie.actor}}</td>
+    <td>{{movie.year}}</td>
+</tr> 
+</ul>
+
+ <div>
+    <input type="text" [(ngModel)] ="num"/>
+    <div [ngSwitch] = "num">
+        <div *ngSwitchcase="0">{{movielist[0].moviename}}</div>
+        <div *ngSwitchcase="1">{{movielist[1].moviename}}</div>
+        <div *ngSwitchcase="2">{{movielist[2].moviename}}</div>
+        <div *ngSwitchcase="3">{{movielist[3].moviename}}</div>
+        <div *ngSwitchDefault>This is Default</div>
+    </div>
+</div>
+<p>ENJOY YOUR SUMMER MOVIES!</p>
+<div class="row">
+    Show <input type ="checkbox" [(ngModel)] = "BuyTickets" >
+</div>
+<img [src]=" " />
+<p *ngIf="BuyTickets">
+    BuyTickets is checked
+</p>
+<p *ngIf="HouseFull">
+    HouseFull is checked
+</p> 
